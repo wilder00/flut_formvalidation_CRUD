@@ -26,4 +26,4 @@ samples, guidance on mobile development, and a full API reference.
 
 ## plugins
 
-- rxdart: version ^0.22.0 nos permitirá combinar Streams, los resultados o data de los streams. [documentacion](https://pub.dev/packages/rxdart)
+- rxdart: version ^0.22.0 nos permitirá combinar Streams, los resultados o data de los streams. [documentacion](https://pub.dev/packages/rxdart). Tiene más cosas, pero solo usaremos la de combinar streams.
