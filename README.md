@@ -23,3 +23,7 @@ samples, guidance on mobile development, and a full API reference.
 
 - documentación: [https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html](https://api.flutter.dev/flutter/widgets/InheritedWidget-class.html)
 - tambien puedes ver el [video](https://www.youtube.com/watch?v=ml5uefGgkaA)
+
+## plugins
+
+- rxdart: version ^0.22.0 nos permitirá combinar Streams, los resultados o data de los streams. [documentacion](https://pub.dev/packages/rxdart)
