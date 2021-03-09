@@ -1,9 +1,10 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 import 'package:formvalidation/src/bloc/login_bloc.dart';
+//exportamos para que podamos usar el final loginBloc
+export 'package:formvalidation/src/bloc/login_bloc.dart';
 
 class Provider extends InheritedWidget {
+  //estamos inicializando nuestro LogiBlock, el que servirá para validar el login
   final loginBloc = LoginBloc();
 
   //el key es un identificador único del widget
