@@ -61,7 +61,7 @@ class LoginPage extends StatelessWidget {
                 width: double.infinity,
               ),
               Text(
-                "Fernando Herrera",
+                "Wilder Trujillo",
                 style: TextStyle(color: Colors.white, fontSize: 25.0),
               )
             ],
