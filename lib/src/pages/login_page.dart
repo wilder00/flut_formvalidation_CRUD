@@ -177,9 +177,22 @@ class LoginPage extends StatelessWidget {
           elevation: 0.0,
           color: Colors.deepPurple,
           textColor: Colors.white,
-          onPressed: !snapshot.hasData ? null : () {},
+          onPressed: !snapshot.hasData ? null : () => _login(context, bloc),
         );
       },
     );
+  }
+
+  _login(BuildContext context, LoginBloc bloc) {
+    print("==================================");
+    print('Email: ${bloc.email}');
+    print('password: ${bloc.password}');
+    print("==================================");
+
+    //con esto hacemos que cambie de página, pero con opcion de regreso, pero esto no tiene sentido para un login
+    //Navigator.pushNamed(context, "home");
+
+    //este tiene sentido porque hace que la página a la que saltemos como el nuevo home o initial route
+    Navigator.pushReplacementNamed(context, "home");
   }
 }
