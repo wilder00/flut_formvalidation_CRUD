@@ -33,6 +33,8 @@ dependencies:
   # tambien es válido no especificar la versión, hace que se tome la última
   http:
   image_picker:
+  #para saber el tipo de imagen que se sube
+  mime_type: ^0.3.2
 
 dev_dependencies:
   flutter_test:
