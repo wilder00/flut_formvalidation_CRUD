@@ -34,7 +34,7 @@ class ProductoModel {
       );
 
   Map<String, dynamic> toJson() => {
-        "id": id,
+        /* "id": id, */ //evitamos que sea parte del contenido ya que firebase le pone el id en un nodo superior y no en el campo
         "titulo": titulo,
         "valor": valor,
         "disponible": disponible,

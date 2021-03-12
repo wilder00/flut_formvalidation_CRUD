@@ -44,4 +44,15 @@ class ProductosProvider {
     print(json.decode(resp.body));
     return 1;
   }
+
+  Future<bool> editarProducto(ProductoModel producto) async {
+    final url = '$_url/productos/${producto.id}.json';
+
+    final resp = await http.put(url, body: productoModelToJson(producto));
+
+    final decodedData = json.decode(resp.body);
+
+    print(decodedData);
+    return true;
+  }
 }
