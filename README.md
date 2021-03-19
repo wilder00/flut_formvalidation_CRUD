@@ -27,3 +27,14 @@ samples, guidance on mobile development, and a full API reference.
 ## plugins
 
 - rxdart: version ^0.22.0 nos permitirá combinar Streams, los resultados o data de los streams. [documentacion](https://pub.dev/packages/rxdart). Tiene más cosas, pero solo usaremos la de combinar streams.
+
+## Documentaciones consultadas
+
+### Inicio y registro
+
+se usó la documenta ción de firebase de [Auth REST API](https://firebase.google.com/docs/reference/rest/auth#section-create-email-password)
+
+## Configuración
+
+- en el archivo .env.example copiar y dejarlo como .env
+- el Api key necesario se encuentra en la configuración de proyecto de firebase con el nombre de `Clave de API web`

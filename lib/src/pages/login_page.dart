@@ -111,7 +111,7 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           FlatButton(
-            child: Text('¿ya tienes cuenta?'),
+            child: Text('¿No tienes cuenta?'),
             onPressed: () =>
                 Navigator.pushReplacementNamed(context, "registro"),
           ),

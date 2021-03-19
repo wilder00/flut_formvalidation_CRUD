@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:formvalidation/src/bloc/login_bloc.dart';
 import 'package:formvalidation/src/bloc/provider.dart';
+import 'package:formvalidation/src/providers/usuario_provider.dart';
 
 class RegistroPage extends StatelessWidget {
+  final usuarioProvider = new UsuarioProvider();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -111,7 +114,7 @@ class RegistroPage extends StatelessWidget {
             ),
           ),
           FlatButton(
-            child: Text('¿Crear una nueva cuenta? Login'),
+            child: Text('¿Ya tienes cuenta? Login'),
             onPressed: () => Navigator.pushReplacementNamed(context, "login"),
           ),
           SizedBox(
@@ -180,22 +183,13 @@ class RegistroPage extends StatelessWidget {
           elevation: 0.0,
           color: Colors.deepPurple,
           textColor: Colors.white,
-          onPressed: !snapshot.hasData ? null : () => _login(context, bloc),
+          onPressed: !snapshot.hasData ? null : () => _register(context, bloc),
         );
       },
     );
   }
 
-  _login(BuildContext context, LoginBloc bloc) {
-    print("==================================");
-    print('Email: ${bloc.email}');
-    print('password: ${bloc.password}');
-    print("==================================");
-
-    //con esto hacemos que cambie de página, pero con opcion de regreso, pero esto no tiene sentido para un login
-    //Navigator.pushNamed(context, "home");
-
-    //este tiene sentido porque hace que la página a la que saltemos como el nuevo home o initial route
-    Navigator.pushReplacementNamed(context, "home");
+  _register(BuildContext context, LoginBloc bloc) {
+    usuarioProvider.nuevoUsuario(bloc.email, bloc.password);
   }
 }
