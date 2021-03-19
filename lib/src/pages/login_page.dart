@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:formvalidation/src/bloc/login_bloc.dart';
 import 'package:formvalidation/src/bloc/provider.dart';
+import 'package:formvalidation/src/providers/usuario_provider.dart';
 
 class LoginPage extends StatelessWidget {
+  final usuarioProvider = new UsuarioProvider();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -188,15 +191,11 @@ class LoginPage extends StatelessWidget {
   }
 
   _login(BuildContext context, LoginBloc bloc) {
-    print("==================================");
+    /* print("==================================");
     print('Email: ${bloc.email}');
     print('password: ${bloc.password}');
-    print("==================================");
+    print("=================================="); */
 
-    //con esto hacemos que cambie de página, pero con opcion de regreso, pero esto no tiene sentido para un login
-    //Navigator.pushNamed(context, "home");
-
-    //este tiene sentido porque hace que la página a la que saltemos como el nuevo home o initial route
-    Navigator.pushReplacementNamed(context, "home");
+    usuarioProvider.login(bloc.email, bloc.password);
   }
 }
